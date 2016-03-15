@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.CustomerBean" table="customer" >
+        
+        <id name="custid" column="custid">
+            <generator class="identity"/>
+        </id>
+        
+        <property name="password" column="password" />
+        <property name="email" column="email" />
+        <property name="birth" column="birth" />
+        
+        
+<!--         <many-to-one name="deptVO" class="com.dept.model.DeptVO" lazy="false"> -->
+<!--             <column name="deptno" /> -->
+<!--         </many-to-one> -->
+        
+    </class>
+</hibernate-mapping>
+

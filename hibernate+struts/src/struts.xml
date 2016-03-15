@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="thePackage" namespace="/theNamespace" extends="struts-default">
+    	<action name="helloAction" class="hello.Hello">
+    		<result name="success">/hello.jsp</result>
+    		<result name="login">/hi.jsp</result>
+    	</action>
+    	<action name="customerAction" class="model.CustomerAction">
+    	
+    		<result name="success">/index.jsp</result>
+    		<result name="input">/secure/login.jsp</result>
+    		<result name="login">/secure/login.jsp</result>
+
+    	</action>
+   	 	<action name="productAction" class="model.ProductAction">
+   	
+   		<result name="success">/pages/product.jsp</result>
+   		<result name="input">/pages/product.jsp</result>
+		<result name="display">/pages/display.jsp</result>
+    	</action>
+    </package>
+    
+
+</struts>

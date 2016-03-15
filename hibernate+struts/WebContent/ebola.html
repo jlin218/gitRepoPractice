@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8">
+<title>First Page</title>
+<link rel="stylesheet" href="main.css">
+
+</head>
+
+<script>
+	HttpResponse<JsonNode> response = Unirest.get("https://ebola-outbreak.p.mashape.com/cases")
+			.header("X-Mashape-Key",
+					"1g4fw4E4JImshe9NzUBvJWkE72Isp1tJIo8jsnVfzHeNYD0GTK")
+			.asJson();
+	document.getElementById("hi").innerHTML=JSON.stringify(response);
+</script>
+<body>
+	<p id="hi"></p>
+
+
+	<h1>============================================================================</h1>
+	<div id="allPage">
+		<h1>Javascript Homework</h1>
+		<ul>
+			<li><a href="multiplication.html">99乘法表</a></li>
+			<li><a href="formCheck.html">Form Check</a></li>
+			<li><a href="rating.html">點擊評分</a></li>
+			<li><a href="ad.html">廣告輪播</a></li>
+			<li><a href="calendarScroll.html">日期</a></li>
+		</ul>
+		<div id="content"></div>
+
+	</div>
+	<h5>
+		<input type="button" value="log out" onclick="logOut()">
+	</h5>
+</body>
+</html>
+
+
+
+
+
+
+
